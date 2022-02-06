@@ -1,0 +1,120 @@
+@font-face {
+  font-family: "Roboto";
+  src: url("/assets/fonts/Roboto-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Quicksand";
+  src: url("../fonts/Quicksand-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+html,body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto", "Arial", sans-serif;
+  font-size: 15px;
+  line-height: 29px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Quicksand", "Arial", sans-serif;
+}
+
+h2 {
+  font-size: 48px;
+  font-family: Quicksand;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 48px;
+  line-height: 60px;
+  text-align: center;
+  color: #ffffff;
+}
+
+p{
+  letter-spacing: 0.03em;
+}
+.text--s {
+  position: relative;
+  width: 90px;
+  height: 12px;
+  align-content: center;
+  font-size: 10px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 12px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #ffffff;
+  padding-bottom: 16px;
+}
+
+.title {
+  position: relative;
+  height: 60px;
+  font-family: Quicksand;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 48px;
+  line-height: 60px;
+  color: #ffffff;
+  margin-right: 0px;
+}
+
+button.btn {
+  position: relative;
+  font-size: 13px;
+  border-radius: 4px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  height: 44px;
+}
+button.btn.btn--light {
+  font-weight: bold;
+  background-color: #ffffff;
+  color: #565f82;
+  border: 0;
+  padding-left: 26px;
+  padding-right: 26px;
+}
+
+button.btn.btn--link {
+  background-color: #ffffff;
+  color: #c7d3ff;
+  border: 1px solid #c7d3ff;
+  padding-left: 9px;
+  padding-right: 9px;
+  background: linear-gradient(229.32deg, #6888ff 12.77%, #5e80ff 73.11%);
+}
+
+.section.section--get-start {
+  text-align: center;
+  padding-top: 80px;
+  padding-bottom: 88px;
+  background-image: url(../img/content.jpg);
+  background-position: center;
+  background-size: cover;
+  color: #ffffff;
+}
+
+.section.section--get-start .description {
+  max-width: 712px;
+  margin: 0 auto 54px;
+}
+
+h2.title {
+  margin-top: 10px;
+  margin-bottom: 22px;
+}
