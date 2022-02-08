@@ -11,7 +11,8 @@
   font-weight: normal;
 }
 
-html,body {
+html,
+body {
   margin: 0;
   padding: 0;
 }
@@ -42,7 +43,12 @@ h2 {
   color: #ffffff;
 }
 
-p{
+h2.title {
+  margin-top: 10px;
+  margin-bottom: 22px;
+}
+
+p {
   letter-spacing: 0.03em;
 }
 .text--s {
@@ -114,7 +120,63 @@ button.btn.btn--link {
   margin: 0 auto 54px;
 }
 
-h2.title {
-  margin-top: 10px;
-  margin-bottom: 22px;
+.newsletter {
+  border: 1px solid #d8e3fe;
+  height: 332px;
+}
+.block__newsletter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 118px;
+}
+
+.newsletter__signup {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 95px;
+}
+.newsletter__form {
+  text-align: left;
+  height: 95px;
+  margin-right: 80px;
+}
+
+.sigtitle{
+  font-size: 18px;
+  color: #3D4F9F;
+  font-weight: 600;
+}
+
+p.discription {
+  color: #8D96BD; 
+  font-size: 14px;
+  height: 54px;
+  margin-top: 8px;
+}
+
+form {
+  display: flex;
+  height: 59px;
+}
+
+input.e-mail {
+  height: 59px;
+  margin-right: 18px;
+  font-size: 13px;
+  border-radius: 5px;
+  border: none;
+  color: #7a85ad;
+  background: #efeff7;
+  font-weight: 700;
+  padding: 0px 139px 5px 14px;
+}
+
+input.submit {
+  background: #4d6ce1;
+  color: #fff;
+  padding: 21px 62px;
+  border-radius: 5px;
+  border: none;
 }
