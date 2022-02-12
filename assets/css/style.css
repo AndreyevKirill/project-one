@@ -464,9 +464,6 @@ form {
     display: flex;
 }
 
-button.submit {
-
-}
 input.e-mail {
   margin: 0px 16px 0px 34px;
   font-size: 13px;
