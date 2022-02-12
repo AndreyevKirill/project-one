@@ -191,23 +191,22 @@ height: 43px;
   background-size: cover;
   background-position: bottom;
   margin:0px auto;
-  border-top: 1px solid #d8e3fe;
 }
 
+.hero__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 .hero__subtitle {
   color: #3D4F9F;
   font-family: Roboto;
   font-weight: 600;
   font-size: 10px;
-  display: flex;
-  justify-content: center;
   line-height: 12px;
   letter-spacing: 0.1em;
-  align-items: center;
   padding-top:92px;
 }
-
-
 
 .slider span {
   display: inline-block;
@@ -223,17 +222,12 @@ height: 43px;
 }
 
 .hero__title {
-    display: flex;
-    justify-content: center;
     margin-top: 16px;
 	color: #3D4F9F;
 	font-weight: 300;
 }
 
 .hero__text {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     font-size: 15px;
     line-height: 29px;
     text-align: center;
@@ -243,7 +237,6 @@ height: 43px;
 }
 
 button.btn.btn--play {
-    display: flex;
     border-radius: 50%;
     width: 52px;
 	margin: 20px auto;
@@ -260,9 +253,10 @@ button.btn.btn--play {
 /*********** partners-section ***********/
 .partners-section {
   padding: 58px 0px;
+  border: 1px solid #D8E3FE;
 }
 
-.partners-section .container {
+.part__container {
   display: flex;
   justify-content: center;
   align-items: baseline;
@@ -271,13 +265,14 @@ button.btn.btn--play {
   gap: 10px 20px;
 }
 
+img {
+	padding-right:76px;	
+}
 a.partner {
-  color: #D6DAE5;
+  display: flex;
+  height: 59px;
 }
 
-a.partner:hover {
-  color: #5982E7;
-}
 @media screen and (min-width: 576px) {
   
 }
@@ -298,8 +293,6 @@ a.partner:hover {
 }
 /*********** customer_help ***********/
 .customer_help {
-    height: 964px;
-    border: 1px solid;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -311,7 +304,7 @@ a.partner:hover {
     letter-spacing: 0.1em;
     text-transform: uppercase;
     color: #3D4F9F;
-    padding-top: 176px;
+    margin-top: 176px;
 }
 
 .cus__title {
@@ -331,15 +324,12 @@ a.partner:hover {
     font-weight: 500;
     font-size: 15px;
     line-height: 19px;
-    display: flex;
     align-items: center;
     letter-spacing: 0.03em;
     color: #8E96B7;
+	margin: 74px 0px 174px 0px;
 }
-.cus__spisok{
-	padding: 15px 0px 17px 0px;
-}
-.cus__spisok li{
+.cus__spisok li, .cus__spisok__div li{
 	background-image: url(../img/li.jpg);
     background-repeat: no-repeat;
     background-position: 6px 6px;
@@ -348,10 +338,25 @@ a.partner:hover {
 	background-size: 15px;
 }
 
-li:nth-of-type(3) {
+.cus__spisok__div li {
     transform: rotate(180deg);
+    display: inline-block;
 }
 
+.cus__div{
+	display:flex;
+	justify-content:center;
+}
+.cus__but{
+	background: #E8ECF4;
+    border-radius: 2px;
+    font-size: 13px;
+    line-height: 16px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #7382A3;
+}
 /*********** Get started ***********/
 h2.title {
   margin-top: 10px;
@@ -455,21 +460,29 @@ p.discription {
   margin: 8px 0px 0px 44px;
 }
 
+form {
+    display: flex;
+}
+
+button.submit {
+
+}
 input.e-mail {
-  margin: 12px 16px 0px 34px;
+  margin: 0px 16px 0px 34px;
   font-size: 13px;
   border-radius: 5px;
   border: none;
   color: #7a85ad;
   background: #efeff7;
   font-weight: 700;
-  padding: 21px 75px 21px 26px;
+  padding: 0px 75px 0px 26px;
 }
 
-input.submit {
+button.submit {
+  height: 59px;
   background: #4d6ce1;
   color: #fff;
-  padding: 21px 66px;
+  padding: 16px 66px;
   border-radius: 5px;
   border: none;
 }
