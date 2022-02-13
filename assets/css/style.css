@@ -270,6 +270,7 @@ section.section.section--hero {
 .btn.btn--slider {
   border-radius: 50%;
   height: 12px;
+  width: 12px;
   position: relative;
   margin-left: 4px;
   border: 0px;
@@ -282,7 +283,7 @@ btn--slider-active {
 }
 
 .btn--play--img {
-  margin: 10px 0px 0px 10px;
+  margin: 6px 0px 0px 14px;
 }
 
 .img.btn--play--img {
@@ -309,7 +310,7 @@ btn--slider-active {
 img {
   padding-right: 76px;
 }
-a.partner {
+.partner {
   display: flex;
   height: 59px;
 }
@@ -395,7 +396,7 @@ a.partner {
   color: #7382a3;
 }
 /*********** Get started ***********/
-h2.title {
+.title {
   margin-top: 10px;
   margin-bottom: 22px;
 }
@@ -429,14 +430,14 @@ h2.title {
   margin-right: 0px;
 }
 
-button.btn {
+.btn {
   position: relative;
   font-size: 13px;
   border-radius: 4px;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   height: 44px;
 }
-button.btn.btn--light {
+.btn.btn--light {
   font-weight: bold;
   background-color: #ffffff;
   color: #565f82;
@@ -445,7 +446,7 @@ button.btn.btn--light {
   padding-right: 26px;
 }
 
-button.btn.btn--link {
+.btn.btn--link {
   background-color: #ffffff;
   color: #c7d3ff;
   border: 1px solid #c7d3ff;
@@ -491,7 +492,7 @@ button.btn.btn--link {
   margin: 8px 0px 0px 44px;
 }
 
-p.discription {
+.discription {
   color: #8d96bd;
   font-size: 14px;
   margin: 8px 0px 0px 44px;
@@ -501,7 +502,7 @@ form {
   display: flex;
 }
 
-input.e-mail {
+.e-mail {
   margin: 0px 16px 0px 34px;
   font-size: 13px;
   border-radius: 5px;
@@ -512,7 +513,7 @@ input.e-mail {
   padding: 0px 75px 0px 26px;
 }
 
-button.submit {
+.submit {
   height: 59px;
   background: #4d6ce1;
   color: #fff;
