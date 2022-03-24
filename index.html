@@ -11,11 +11,11 @@
     <header class="header">
       <div class="container">
         <div class="header__left">
-          <a class="menu-trigger menu-triger--active" href="#">
+          <!--<a class="menu-trigger menu-triger--active" href="#">
             <span></span>
             <span></span>
             <span></span>
-          </a>
+          </a>-->
           <a href="#" class="logo">
             <img
               src="./assets/svg/logo.svg"
@@ -73,23 +73,38 @@
     </header>
 
     <section class="section section--hero">
-      <div class="hero__container">
-        <div class="subtitle">PLAN YOUR LIFE</div>
-        <h1 class="title">Increase your <b>productivity</b></h1>
-        <p class="hero__text">
-          Brute laoreet efficiendi id his, ea illum nonumes luptatum pro. Usu
-          atqui laudem an, insolens gubergren similique est cu. Et vel modus
-          congue vituperata.
-        </p>
-        <button class="btn btn--play">
-          <img src="assets/svg/Polygon1.svg" />
-        </button>
+      <div class="slider">
+        <div class="slider__view">
+          <div class="slider__portal">
+            <div class="slider__slide">
+              <div class="container container--hero">
+                <div class="subtitle subtitle--hero">PLAN YOUR LIFE</div>
+                <h1 class="title text--thin">
+                  Increase your <b>productivity</b>
+                </h1>
+                <p class="description description--hero">
+                  Brute laoreet efficiendi id his, ea illum nonumes luptatum
+                  pro. Usu atqui laudem an, insolens gubergren similique est cu.
+                  Et vel modus congue vituperata.
+                </p>
+                <button class="btn btn--play">
+                  <img src="assets/svg/Polygon1.svg" />
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="slider__nav">
+          <button class="slider__nav-item"></button>
+          <button class="slider__nav-item"></button>
+          <button class="slider__nav-item slider__nav-item--active"></button>
+        </div>
       </div>
-      <div class="slider-nav">
-        <button class="slider-nav__item slider-nav__item--active"></button>
-        <button class="slider-nav__item"></button>
-        <button class="slider-nav__item"></button>
-      </div>
+      <!--<div class="slider__nav">
+        <button class="slider__nav-item slider__nav-item--active"></button>
+        <button class="slider__nav-item"></button>
+        <button class="slider__nav-item"></button>
+      </div>-->
     </section>
 
     <section class="section section--partners">
@@ -103,22 +118,24 @@
     </section>
 
     <section class="section plan--manage">
-      <div class="plan__container">
+      <div class="container container--plan">
         <div class="plan__left">
-          <div class="subtitle">DESKTOP AND MOBILE APP</div>
-          <h2 class="title"><b>Plan</b> and <b>manage</b></h2>
-          <p class="plan__text">
+          <div class="subtitle subtitle--plan">DESKTOP AND MOBILE APP</div>
+          <h2 class="title text--thin"><b>Plan</b> and <b>manage</b></h2>
+          <p class="description description--plan">
             Brute laoreet efficiendi id his, ea illum nonumes luptatum pro. Usu
             atqui laudem an, insolens gubergren similique est cu. Et vel modus
             congue vituperata. Solum patrioque no sea. Mea ex malis mollis
             oporteat. Eum an expetenda consequat.
           </p>
           <div class="btn-group">
-            <button class="btn btn--video">
+            <button class="btn btn--secondary btn--lg">
               View video
               <img class="btn__pic" src="assets/svg/Polygon2.svg" />
             </button>
-            <button class="btn btn--link">See features</button>
+            <button class="btn btn--outline btn--grey btn--lg">
+              See features
+            </button>
           </div>
         </div>
         <div class="plan__right">
@@ -127,10 +144,10 @@
       </div>
     </section>
 
-    <section class="features">
-      <div class="fea__container">
-        <div class="fea__subtitle">ABOUT US</div>
-        <h2 class="fea__title">Read about our app</h2>
+    <section class="section section--features">
+      <div class="container container--features">
+        <div class="subtitle subtitle--features">ABOUT US</div>
+        <h3 class="title title--features">Read about our app</h3>
         <div class="fea__table">
           <div class="fea_table_col">
             <div class="col__item">
@@ -171,39 +188,39 @@
             <p class="fea__text">Nisl idque mel ea, nominati voluptatum.</p>
           </div>
         </div>
-        <div class="fea__btn">
-          <button class="btn btn--read">Read more</button>
+        <div class="btn-features-group">
+          <button class="btn btn--danger">Read more</button>
           <div class="fea__line"></div>
           <p class="fea__or">OR</p>
           <div class="fea__line"></div>
-          <button class="btn btn--get">Get started</button>
+          <button class="btn btn--primary">Get started</button>
         </div>
       </div>
     </section>
 
-    <section class="stats">
-      <div class="stats__con">
+    <section class="section section--stats">
+      <div class="container--stats">
         <div class="stats__left">
           <img class="left__pic" src="assets/svg/stats1.svg" />
-          <p class="stats__title--left">89%</p>
-          <p class="stats__subtitle--left">
+          <h1 class="title title--stats--left">89%</h1>
+          <h2 class="subtitle subtitle--stats--left">
             Customers who have increased their productivity
-          </p>
+          </h2>
         </div>
         <div class="stats__right">
           <img class="right__pic" src="assets/svg/stats2.svg" />
-          <p class="stats__title--right">3123</p>
-          <p class="stats__subtitle--right">
+          <p class="title title--stats--right">3123</p>
+          <p class="subtitle subtitle--stats--right">
             Users who have used our application
           </p>
         </div>
       </div>
     </section>
 
-    <section class="blog">
-      <div class="blog__con">
-        <div class="blog__subtitle">OUR RESOURCES</div>
-        <h2 class="blog__title">Start reading our blog</h2>
+    <section class="section section--blog">
+      <div class="container container--blog">
+        <div class="subtitle subtitle--blog">OUR RESOURCES</div>
+        <h3 class="title title--blog">Start reading our blog</h3>
         <div class="blog__content">
           <div class="content__arrow">
             <img class="arrow__pic" src="assets/svg/arrow.svg" />
@@ -221,16 +238,16 @@
               </div>
             </div>
             <div class="page_right">
-              <h2 class="page__title">How to start planning</h2>
-              <p class="page__text">
+              <h2 class="title title--content">How to start planning</h2>
+              <p class="description description--blog">
                 Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu
                 usu vidit tractatos, vero tractatos ius an, in mel diceret
                 persecuti. Natum petentium principes mei ea. Tota everti
                 periculis vis ei, quas tibique pro at, eos ut decore ...
               </p>
-              <div class="page-btn-group">
-                <button class="btn btn--readnow">Read now</button>
-                <button class="btn btn--add">Add to your bookmarks</button>
+              <div class="btn-blog-group">
+                <button class="btn btn--primary">Read now</button>
+                <button class="btn btn--light">Add to your bookmarks</button>
               </div>
             </div>
           </div>
@@ -238,20 +255,20 @@
             <img class="arrow__pic" src="assets/svg/arrow.svg" />
           </div>
         </div>
-        <div class="blog-slider">
-          <button class="blog-slider__item blog-slider__item--active"></button>
-          <button class="blog-slider__item"></button>
-          <button class="blog-slider__item"></button>
-        </div>
+      </div>
+      <div class="slider slider--blog">
+        <button class="slider-item slider--active"></button>
+        <button class="slider-item"></button>
+        <button class="slider-item"></button>
       </div>
     </section>
 
-    <section class="quotes">
-      <div class="container">
+    <section class="section section--quotes">
+      <div class="container container--quotes">
         <div class="quotes__left">
-          <h2 class="quotes__subtitle">testimonials</h2>
-          <div class="quotes__title">Customers's quotes</div>
-          <p class="quotes__description">
+          <div class="subtitle subtitle--quotes">testimonials</div>
+          <h2 class="title title--quotes">Customers's quotes</h2>
+          <p class="description description--quotes">
             Brute laoreet efficiendi id his, ea illum nonumes luptatum pro. Usu
             atqui laudem an.
           </p>
@@ -267,7 +284,8 @@
                     diceret persecuti.
                   </div>
                   <img
-                    class="slider__slide-image" src="assets/svg/Ellipse2.1.svg"
+                    class="slider__slide-image"
+                    src="assets/svg/Ellipse2.1.svg"
                   />
                 </div>
                 <div class="slider__slide slider__slide--shadow">
@@ -284,7 +302,9 @@
             <div class="slider__nav">
               <button class="slider__nav-item"></button>
               <button class="slider__nav-item"></button>
-              <button class="slider__nav-item slider__nav-item--active"></button>
+              <button
+                class="slider__nav-item slider__nav-item--active"
+              ></button>
               <button class="slider__nav-item"></button>
               <button class="slider__nav-item"></button>
               <button class="slider__nav-item"></button>
@@ -297,124 +317,96 @@
       </div>
     </section>
 
-    
     <section class="section section--customer_help">
-		<div class="customer__container"> 
-			<div class="customer__title">
-				CUSTOMER HELP
-			</div>
-			<div class="customer__subtitle">
-				Frequently asked questions
-			</div>
-			<div class="customer__questions">
-				<div class="questions__item">
-					<img class="questions__vektor" src="assets/img/li.jpg">
-					Reque insolens in vel?
-				</div>
-				<div class="questions__item">
-					<img class="questions__vektor" src="assets/img/li.jpg">
-					Vis rebum error graecis ea, id sit postea accusamus?
-				</div>
-				<div class="questions__item questions__item--active">
-					<img class="questions__vektor" src="assets/img/li.jpg">
-					<p class="answer__description--active">
-						Lorem repudiandae ne nec?
-					</p>
-					<div class="questions__answer">
-						<p class="answer__description">
-						Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu
-						usu vidit tractatos, vero tractatos ius an, in mel diceret
-						persecuti.
-						</p>
-						<button class="btn btn--doc">Go to documentation</button>
-					</div>
-				</div>
-				<div class="questions__item">
-					<img class="questions__vektor" src="assets/img/li.jpg">
-					Ad dicit numquam vel. Et eos iudico feugait percipitur?
-				</div>
-				<div class="questions__item">
-					<img class="questions__vektor" src="assets/img/li.jpg">
-					Sea no dico percipitur. Fierent constituam definitiones id eum?
-				</div>
-			</div> 
-			
-			<!--<ul>
-					<li class="questions__item">
-						<img class="questions__vektor" src="assets/img/li.jpg">
-						Reque insolens in vel?
-					</li>
-					<li class="questions__item">
-						<img class="questions__vektor" src="assets/img/li.jpg">
-						Vis rebum error graecis ea, id sit postea accusamus?
-					</li>
-					<li class="questions__item questions__item--active">
-						<img class="questions__vektor" src="assets/img/li.jpg">
-						Lorem repudiandae ne nec?
-						<div class="questions__answer">
-						<p class="answer__description">
-							Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu
-							usu vidit tractatos, vero tractatos ius an, in mel diceret
-							persecuti.
-						</p>
-						<button class="btn btn--doc">Go to documentation</button>
-						</div>
-					</li>
-					<li class="questions__item">
-						<img class="questions__vektor" src="assets/img/li.jpg">
-						Ad dicit numquam vel. Et eos iudico feugait percipitur?
-					</li>
-					<li class="questions__item">
-						<img class="questions__vektor" src="assets/img/li.jpg">
-						Sea no dico percipitur. Fierent constituam definitiones id eum?
-					</li>					
-				</ul>-->
-			
-		</div>
-    </section> 
+      <div class="customer__container">
+        <div class="subtitle subtitle--customer">CUSTOMER HELP</div>
+        <h3 class="title title--customer">Frequently asked questions</h3>
+        <div class="customer__questions">
+          <div class="questions__item">
+            <div class="questions__icon-wraper">
+              <img class="questions__vektor" src="assets/img/li.jpg" />
+            </div>
+            Reque insolens in vel?
+          </div>
+          <div class="questions__item">
+            <div class="questions__icon-wraper">
+              <img class="questions__vektor" src="assets/img/li.jpg" />
+            </div>
+            Vis rebum error graecis ea, id sit postea accusamus?
+          </div>
+          <div class="questions__item questions__item--active">
+            <div class="questions__icon-wraper">
+              <img class="questions__vektor" src="assets/img/li.jpg" />
+            </div>
+            <div class="questions__item-content-wraper">
+              <div class="questions__item-title">Lorem repudiandae ne nec?</div>
+              <div class="questions__item-content">
+                <p class="description description--customer">
+                  Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam.
+                  Eu usu vidit tractatos, vero tractatos ius an, in mel diceret
+                  persecuti.
+                </p>
+                <button class="btn btn--secondary btn--long">
+                  Go to documentation
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="questions__item">
+            <div class="questions__icon-wraper">
+              <img class="questions__vektor" src="assets/img/li.jpg" />
+            </div>
+            Ad dicit numquam vel. Et eos iudico feugait percipitur?
+          </div>
+          <div class="questions__item">
+            <div class="questions__icon-wraper">
+              <img class="questions__vektor" src="assets/img/li.jpg" />
+            </div>
+            Sea no dico percipitur. Fierent constituam definitiones id eum?
+          </div>
+        </div>
+      </div>
+    </section>
 
     <section class="section section--get-start">
-		<div class="get__container"> 
-			<span class="get_subtitle">PLAN YOUR LIFE</span>
-			<h2 class="get_title">Get <b>started</b> now</h2>
-			<p class="description">
-				Brute laoreet efficiendi id his, ea illum nonumes luptatum pro. Usu
-				atqui laudem an, insolens gubergren similique est cu. Et vel modus
-				congue vituperata.
-			</p>
-			<div class="btn-group"> 
-				<button class="btn btn--price">View pricing</button>
-				<button class="btn btn--read-doc">Read documentation</button>
-			</div>
-		</div>
+      <div class="container container--get">
+        <div class="subtitle subtitle--get">PLAN YOUR LIFE</div>
+        <h2 class="title text--thin title--get">Get <b>started</b> now</h2>
+        <p class="description description--get">
+          Brute laoreet efficiendi id his, ea illum nonumes luptatum pro. Usu
+          atqui laudem an, insolens gubergren similique est cu. Et vel modus
+          congue vituperata.
+        </p>
+        <div class="btn-group">
+          <button class="btn btn--price">View pricing</button>
+          <button class="btn btn--read-doc">Read documentation</button>
+        </div>
+      </div>
     </section>
 
     <section class="section section--newsletter">
-      <div class="block__newsletter">
-        <div class="newsletter__signup">
-          <div class="newsletter__form">
-            <div class="sigtitle">Sign up for newsletter</div>
-            <p class="discription">
-              Cu qui soleat partiendo urbanitas. Eum aperiri indoctum eu, homero
-              alterum.
-            </p>
+      <div class="container container--newsletter">
+        <div class="newsletter--left">
+          <div class="subtitle subtitle--newsletter">
+            Sign up for newsletter
           </div>
+          <p class="discription discription--newsletter">
+            Cu qui soleat partiendo urbanitas. Eum aperiri indoctum eu, homero
+            alterum.
+          </p>
         </div>
-        <form name="text__form" action="" method="post">
-          <input class="e-mail" type="mail" placeholder="Email adress" />
-          <button class="btn btn--submit">Save me</button>
-        </form>
+        <div class="newsletter--right">
+          <form name="text__form" action="" method="post">
+            <input class="e-mail" type="mail" placeholder="Email adress" />
+            <button class="btn btn--submit">Save me</button>
+          </form>
+        </div>
       </div>
     </section>
-<!--
+
     <footer class="footer">
       <div class="container">
         <div class="footer__left">
-          <a class="menu-trigger menu-triger--active" href="#">
-            <span></span>
-            <span></span>
-            <span></span>
-          </a>
           <a href="#" class="logo">
             <img
               src="./assets/svg/logo.svg"
@@ -469,10 +461,9 @@
           <button class="btn btn--primary">Get started</button>
         </div>
       </div>
-      <div class="Copyright">
-        <p class="cop__text">Copyright © 2018 by Random site</p>
+      <div class="container">
+        <p class="cop__text">Copyright © 2018 by Random Site</p>
       </div>
     </footer>
--->
   </body>
 </html>
