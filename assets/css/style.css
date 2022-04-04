@@ -980,12 +980,6 @@ form {
   align-items: center;
 }
 .logo {
-  /* height: 26px;
-  width: 26px;
-  background-color: #5e81fe;
-  border: 0px;
-  border-radius: 50%;
-  */
   margin-right: 73px;
 }
 .menu {
@@ -1046,34 +1040,45 @@ form {
 }
 
 /*Медиа запросы*/
-@media (min-width: 481px) and (max-width: 768px) {
+
+@media (max-width: 576px) {
+  .header .container {
+    justify-content: space-around;
+  }
+  .btn--primary {
+    display: none;
+  }
+  .logo {
+    margin: 0;
+  }
   .menu-trigger {
     position: relative;
     width: 28px;
     height: 15px;
-    left: 125px;
     top: -6px;
   }
-
-  .menu {
+  .menu-trigger.menu-triger--active {
+    margin-left: 50px;
+  }
+  /*  .menu {
     display: none;
-  }
-
+	}
+ 
   .menu-trigger {
-    margin-right: 44px;
-  }
-  .menu-trigger,
-  .menu-trigger span {
-    display: inline-block;
-    transition: all 0.4s;
-    box-sizing: border-box;
-  }
+  margin-right: 44px;
+}
+.menu-trigger,
+.menu-trigger span {
+  display: inline-block;
+  transition: all 0.4s;
+  box-sizing: border-box;
+}
 
-  .menu-trigger {
-    position: relative;
-    width: 30px;
-    height: 14px;
-  }
+.menu-trigger {
+  position: relative;
+  width: 30px;
+  height: 14px;
+}*/
 
   .menu-trigger span {
     position: absolute;
@@ -1084,9 +1089,9 @@ form {
     border-radius: 4px;
   }
 
-  .menu-trigger span:nth-of-type(1) {
-    top: 0;
-  }
+  /*.menu-trigger span:nth-of-type(1) {
+  top: 0;
+}*/
 
   .menu-trigger span:nth-of-type(2) {
     top: 20px;
@@ -1107,10 +1112,8 @@ form {
   .menu-trigger.menu-triger--active span:nth-of-type(3) {
     /*transform: translateY(-20px) rotate(45deg);*/
   }
-  .header__right {
-    display: flex;
-    margin-right: 66px;
-  }
+
+  /*hero*/
   .title {
     display: contents;
   }
@@ -1133,9 +1136,34 @@ form {
     justify-content: center;
   }
 }
-@media screen and (min-width: 576px) {
-}
-@media screen and (min-width: 768px) {
+
+@media (min-width: 576px) and (max-width: 768px) {
+  .header .container {
+    justify-content: space-around;
+  }
+  .btn--primary {
+    display: none;
+  }
+  .logo {
+    margin: 0;
+  }
+  .menu-trigger {
+    position: relative;
+    width: 28px;
+    height: 15px;
+    top: -6px;
+  }
+  .menu-trigger.menu-triger--active {
+    margin-left: 50px;
+  }
+  .menu-trigger span {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: #5e81fe;
+    border-radius: 4px;
+  }
 }
 @media screen and (min-width: 992px) {
   .menu {
