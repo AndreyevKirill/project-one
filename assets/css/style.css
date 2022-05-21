@@ -339,7 +339,7 @@ button {
   margin-right: 73px;
 }
 
-.menu {
+.header .menu {
   display: none;
 }
 
@@ -389,7 +389,7 @@ button {
 }
 
 @media (min-width: 992px) {
-  .menu {
+  .header .menu {
     display: block;
     padding-left: 34px;
   }
@@ -419,10 +419,6 @@ button {
 }
 
 @media (min-width: 1200px) {
-  .menu {
-    display: block;
-  }
-
   .menu__item {
     color: #697ca6;
     font-weight: 600;
@@ -505,7 +501,7 @@ button {
 
 /*media hero*/
 @media (min-width: 768px) {
-  .description--hero {
+  .section--hero .description {
     width: 495px;
   }
 }
@@ -580,6 +576,9 @@ button {
     display: block;
   }
 
+  .section--partners .slider__nav {
+    display: none;
+  }
 }
 
 /*********** plan and manage ***********/
@@ -592,13 +591,13 @@ button {
   margin-bottom: 20px;
 }
 
-.subtitle--plan {
+.section--plan .subtitle {
   padding-bottom: 28px;
   letter-spacing: 0.07em;
   text-align: center;
 }
 
-.description--plan {
+.section--plan .description {
   margin: 22px 0px 58px 0px;
   text-align: center;
 }
@@ -622,12 +621,28 @@ button {
     padding-top: 165px;
   }
 
-  .container--plan {
+  .section--plan .container {
     display: flex;
+    flex-direction: row;
+    overflow: unset;
   }
 
   .plan__left {
     margin: 40px 55px 0px 50px;
+  }
+
+  .section--plan .subtitle,
+  .title,
+  .description {
+    text-align: left;
+  }
+
+  .section--plan .description {
+    text-align: left;
+  }
+
+  .btn--group {
+    justify-content: left;
   }
 
   .plan__right {
@@ -645,7 +660,7 @@ button {
     padding-bottom: 198px;
   }
 
-  .plan__container {
+  /*  .plan__container {
     display: flex;
     max-width: 1160px;
     margin: 0 auto;
@@ -655,7 +670,7 @@ button {
     display: flex;
     overflow: inherit;
   }
-
+*/
   .plan__left {
     padding-top: 90px;
     position: relative;
@@ -664,7 +679,7 @@ button {
     margin: 0px 84px 0px 0px;
   }
 
-  .subtitle--plan {
+  /*  .subtitle--plan {
     text-align: left;
   }
 
@@ -676,15 +691,12 @@ button {
     margin: 22px 0px 58px 0px;
   }
 
-  .btn-group {
-    justify-content: left;
-  }
-
   .btn.btn--link {
     color: #adb4d2;
     background: #f5f8ff;
     border: 1px solid;
   }
+*/
 
   .plan__right {
     position: relative;
@@ -717,25 +729,25 @@ button {
   background-size: cover;
 }
 
-.container--features {
+.section--features .container {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.title--features {
+.section--features .title {
   margin-bottom: 92px;
   font-size: 2.67rem;
   margin-bottom: 50px;
 }
 
-.subtitle--features {
+.section--features .subtitle {
   padding-bottom: 20px;
   font-size: 1.2rem;
   padding-bottom: 36px;
 }
 
-.fea__subtitle {
+/*.fea__subtitle {
   height: 12px;
   font-size: 0.67rem;
   line-height: 1.2em;
@@ -749,7 +761,7 @@ button {
   color: #3d4f9f;
   margin-bottom: 90px;
 }
-
+*/
 .fea__table {
   display: flex;
   margin-bottom: 110px;
@@ -831,10 +843,10 @@ button {
     display: none;
   }
 
-  .btn-features-group {
+  /*  .btn-features-group {
     padding: 50px 0px;
   }
-
+*/
   .btn--primary {
     display: block;
   }
@@ -867,10 +879,10 @@ button {
     display: none;
   }
 
-  .btn-features-group {
+  /*  .btn-features-group {
     padding-top: 50px;
   }
-
+*/
   .btn--primary {
     display: block;
   }
@@ -913,12 +925,12 @@ button {
     padding-bottom: 171px
   }
 
-  .subtitle--features {
+  .section--features .subtitle {
     padding-bottom: 20px;
     font-size: 0.67rem;
   }
 
-  .title--features {
+  .section--features .title {
     margin-bottom: 92px;
     font-size: 1.6rem;
   }
@@ -934,6 +946,10 @@ button {
   .fea__text,
   .fea__or {
     font-size: 0.73rem;
+  }
+
+  .fea__or {
+    padding-top: 5px;
   }
 
   .fea_table_line {
@@ -968,11 +984,11 @@ button {
   .col__item img:nth-of-type(4) {
     width: 17.25px;
     height: 15.5px;
-  }*/
+  }
   .btn-features-group {
     padding-top: 50px;
   }
-
+*/
   .btn--primary {
     display: block;
   }
@@ -980,7 +996,7 @@ button {
 }
 
 /*********** stats ************/
-.container--stats {
+.section--stats .container {
   display: flex;
 }
 
@@ -1001,16 +1017,16 @@ button {
   flex-direction: column;
 }
 
-.title--stats--left {
+.stats__left .title {
   margin: 0px;
   font-weight: normal;
-  line-height: 5.53em;
+  line-height: 1.73em;
   letter-spacing: 0.03em;
   color: #ffffff;
   padding: 0px 90px 0px 0px;
 }
 
-.subtitle--stats--left {
+.stats__left .subtitle {
   width: 260px;
   font-weight: 500;
   font-size: 1.2rem;
@@ -1026,7 +1042,7 @@ button {
   margin: 70px 0px 12px 94px;
 }
 
-.title--stats--right {
+.stats__right .title {
   margin: 0px;
   font-family: Quicksand;
   font-size: 3.2rem;
@@ -1035,7 +1051,7 @@ button {
   padding: 0px 0px 0px 90px;
 }
 
-.subtitle--stats--right {
+.stats__right .subtitle {
   width: 260px;
   font-family: Quicksand;
   font-size: 1.2rem;
@@ -1052,7 +1068,7 @@ button {
 }
 
 @media (max-width: 768px) {
-  .container--stats {
+  .section--stats .container {
     flex-direction: column;
   }
 
@@ -1064,11 +1080,11 @@ button {
     margin: 66px 0px 14px;
   }
 
-  .title--stats--left {
+  .stats__left .title {
     padding: 0;
   }
 
-  .subtitle--stats--left {
+  .stats__left .subtitle {
     margin: 4px 0px 66px;
     text-align: center;
   }
@@ -1081,11 +1097,11 @@ button {
     margin: 70px 0px 12px;
   }
 
-  .title--stats--right {
+  .stats__right .title {
     padding: 0;
   }
 
-  .subtitle--stats--right {
+  .stats__right .subtitle {
     margin: 4px 0px 66px 0px;
     text-align: center;
   }
@@ -1093,7 +1109,7 @@ button {
 }
 
 @media (min-width: 768px) {
-  .container--stats {
+  .section--stats .container {
     flex-direction: row;
   }
 }
@@ -1261,8 +1277,6 @@ button {
 
 }
 
-@media (min-width: 768px) {}
-
 @media (min-width: 992px) {
   .content__page {
     flex-direction: row;
@@ -1275,11 +1289,15 @@ button {
 
 /*********** quotes ************/
 .section--quotes {
+  overflow: hidden;
+}
+
+.section--quotes {
   background: linear-gradient(180deg, #eaf0ff 0%, #f6f9ff 100%);
   padding: 50px 0px;
 }
 
-.container--quotes {
+.section--quotes .container {
   flex-direction: column;
   display: flex;
 }
@@ -1294,7 +1312,7 @@ button {
   padding-bottom: 54px;
 }
 
-.title--quotes {
+.quotes__left .title {
   font-size: 2.4rem;
   line-height: 1.25em;
   color: #3d4f9f;
@@ -1302,9 +1320,10 @@ button {
   font-family: Quicksand;
   font-style: normal;
   font-weight: 600;
+  text-align: center;
 }
 
-.subtitle--quotes {
+.quotes__left .subtitle {
   line-height: 0.8em;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -1314,7 +1333,7 @@ button {
 }
 
 
-.description--quotes {
+.quotes__left .description {
   font-size: 0.8rem;
   line-height: 1.92em;
   letter-spacing: 0.03em;
@@ -1351,7 +1370,7 @@ button {
 }
 
 .slider__slide-message {
-  padding: 36px 70px 40px 68px;
+  padding: 38px 70px 40px 68px;
   background-color: #fff;
   text-align: center
 }
@@ -1359,6 +1378,8 @@ button {
 .slider__slide.slider__slide--shadow {
   border: 1px solid #d8e3fe;
   opacity: 0.45;
+  position: inherit;
+  width: max-content;
 }
 
 .slider__slide {
@@ -1406,49 +1427,67 @@ button {
   position: relative;
 }
 
-.section--quotes {
-  overflow: hidden;
-}
-
 @media (min-width: 1200px) {
+  .container {
+    overflow: initial;
+  }
+
   .section--quotes {
     padding: 110px 0px 102px 0px;
   }
 
-  .container--quotes {
+  .quotes__left {
+    padding-left: 80px;
+  }
+
+  .section--quotes .container {
     flex-direction: row;
   }
 
-  .subtitle--quotes {
+  .quotes__left .subtitle {
     margin: 22px 0px 32px 0px;
     padding-bottom: 0px;
   }
 
-  .description--quotes {
+  .quotes__left .description {
     margin: 0;
+    text-align: left;
   }
 
-  .title--quotes {
+  .quotes__left .title {
     margin: 0;
+    text-align: left;
   }
 
   .quotes__right {
-    left: 90px;
+    left: 300px;
+  }
+
+  .slider__slide-image {
+    left: 212px;
   }
 
   .slider__slide--shadow {
     display: block;
   }
 
+  .slider__slide:first-child {
+    padding-right: 60px;
+  }
+
   .slider__slide-message {
     text-align: start;
+  }
+
+  .section--quotes .slider__nav {
+    left: -235px;
   }
 }
 
 
 /*********** customer_help ***********/
 
-.container--customer {
+.section--customer .container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1456,15 +1495,15 @@ button {
   padding: 174px 0px 174px 0px;
 }
 
-.subtitle--customer {
+.section--customer .subtitle {
   margin-bottom: 22px;
 }
 
-.title--customer {
+.section--customer .title {
   margin-bottom: 50px;
 }
 
-.customer__questions {
+.questions {
   max-width: 728px;
 }
 
@@ -1488,7 +1527,7 @@ button {
   padding: 8px 6px 20px 16px;
 }
 
-.description--customer {
+.section--customer .description {
   padding-top: 15px;
   margin: 0;
   letter-spacing: 0.01em;
@@ -1527,7 +1566,7 @@ button {
   background-size: cover;
 }
 
-.container--get {
+.section--get .container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1535,26 +1574,20 @@ button {
   padding: 12px 0 54px 0;
 }
 
-.section--get .title,
+.section--get .title {
+  font-size: 3.2rem;
+  margin-bottom: 30px;
+  color: white;
+}
+
 .section--get .subtitle {
+  padding-bottom: 24px;
   color: white;
 }
 
 .section--get .description {
   max-width: 712px;
   margin: 0 auto 54px;
-}
-
-.subtitle--get {
-  padding-bottom: 24px;
-}
-
-.title--get {
-  font-size: 3.2rem;
-  margin-bottom: 30px;
-}
-
-.description--get {
   line-height: 1.93em;
   text-align: center;
   letter-spacing: 0.03em;
@@ -1566,7 +1599,7 @@ button {
   border-bottom: 1px solid #d8e3fe;
 }
 
-.container--newsletter {
+.section--newsletter .container {
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -1578,7 +1611,7 @@ button {
   flex-direction: column;
 }
 
-.subtitle--newsletter {
+.section--newsletter .subtitle {
 
   letter-spacing: 0.01em;
   font-size: 1.2rem;
@@ -1586,7 +1619,7 @@ button {
   padding-bottom: 22px;
 }
 
-.discription--newsletter {
+.section--newsletter .discription {
   font-size: 0.93rem;
   line-height: 1.92em;
   letter-spacing: 0.03em;
@@ -1630,7 +1663,7 @@ form {
 }
 
 @media (min-width: 1200px) {
-  .container--newsletter {
+  .section--newsletter .container {
     flex-direction: row;
     padding: 110px 0px 122px 0px;
   }
@@ -1640,11 +1673,11 @@ form {
     width: 480px;
   }
 
-  .subtitle--newsletter {
+  .section--newsletter .subtitle {
     margin: 12px 0px 14px 172px;
   }
 
-  .discription--newsletter {
+  .section--newsletter .discription {
     margin: 0px 0px 0px 174px;
     text-align: start;
   }
@@ -1665,6 +1698,14 @@ form {
 .footer .container {
   display: flex;
   padding-bottom: 50px;
+  justify-content: space-between;
+}
+
+.footer .menu {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  top: 34px;
 }
 
 .footer__left,
@@ -1698,6 +1739,10 @@ form {
   color: var(--primary-color);
 }
 
+.menu__item {
+  padding-bottom: 5px;
+}
+
 .socials {
   display: flex;
   align-items: center;
@@ -1708,86 +1753,34 @@ form {
   margin-left: 35px;
 }
 
-.Copyright {
-  position: relative;
-  left: 446px;
-  padding-bottom: 90px;
+.footer .btn--action {
+  display: none;
 }
 
-.cop__text {
+.copyright {
   color: #aeb8d0;
   font-size: 0.8rem;
   letter-spacing: 0.08em;
   margin: 29px 0px 0px 99px;
 }
 
-@media (max-width: 576px) {
-
-  /* .menu__footer {
-    display: flex;
-    flex-direction: row;
-    position: relative;
-    top: 52px;
-    left: -98px;
+@media (min-width: 768px) {
+  .footer .btn--action {
+    display: block;
   }
-
-  .socialss {
-    display: flex;
-    align-items: center;
-    margin-right: 44px;
-    position: relative;
-    left: -180px;
-  }
-
-  .cop__text {
-    margin: 20px 0px;
-  }
-*/
-
 }
 
-
-@media (min-width: 576px) {
-  .menu__footer {
-    display: flex;
-    position: relative;
-    top: 44px;
-    left: -178px;
-  }
-
-  .socialss {
-    display: flex;
-    position: relative;
-    left: -88px;
-  }
-
-  .logo {
-    padding-right: 79px;
-  }
-
-  .cop__text {
-    position: absolute;
-    left: 290px;
-  }
-
-
-}
-
-@media (min-width: 1200px) {
-  .footer__left {
-    padding-right: 334px;
-  }
-
-  .menu__footer {
-    display: flex;
-    position: inherit;
-  }
-
-  .btn--action {
+@media (min-width: 992px) {
+  .footer .btn--action {
     display: block;
   }
 
-  .logo {
-    padding-right: 0px;
+  .footer .menu {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    top: 4px;
   }
 }
+
+@media (min-width: 1200px) {}
