@@ -79,6 +79,7 @@ button {
   max-width: 1210px;
   overflow: hidden;
   padding: 0 15px;
+  word-break: break-word;
 }
 
 .container--full-width {
@@ -747,21 +748,6 @@ button {
   padding-bottom: 36px;
 }
 
-/*.fea__subtitle {
-  height: 12px;
-  font-size: 0.67rem;
-  line-height: 1.2em;
-  letter-spacing: 0.1em;
-  color: #3d4f9f;
-}
-
-.fea__title {
-  font-size: 1.6rem;
-  line-height: 1.25em;
-  color: #3d4f9f;
-  margin-bottom: 90px;
-}
-*/
 .fea__table {
   display: flex;
   margin-bottom: 110px;
@@ -776,7 +762,6 @@ button {
 
 .fea_table_col {
   text-align: center;
-  /*  width: 140px;*/
 }
 
 .col__item {
@@ -825,6 +810,10 @@ button {
   margin-top: 10px;
 }
 
+.section--features .btn--primary {
+  display: block;
+}
+
 @media (max-width: 576px) {
   .section--features {
     padding: 50px 0px;
@@ -843,14 +832,18 @@ button {
     display: none;
   }
 
-  /*  .btn-features-group {
-    padding: 50px 0px;
-  }
-*/
-  .btn--primary {
-    display: block;
+  .section--features .btn--group {
+    flex-direction: column;
   }
 
+  .fea__or {
+    margin: revert;
+    text-align: center;
+  }
+
+  .fea__line {
+    display: none;
+  }
 }
 
 @media (min-width: 576px) {
@@ -878,16 +871,6 @@ button {
   .fea_table_line:nth-of-type(2) {
     display: none;
   }
-
-  /*  .btn-features-group {
-    padding-top: 50px;
-  }
-*/
-  .btn--primary {
-    display: block;
-  }
-
-
 }
 
 @media (min-width: 992px) {
@@ -911,12 +894,6 @@ button {
   .fea_table_line:nth-of-type(2) {
     display: block;
   }
-
-  .btn--primary {
-    display: block;
-  }
-
-
 }
 
 @media (min-width: 1200px) {
@@ -989,10 +966,6 @@ button {
     padding-top: 50px;
   }
 */
-  .btn--primary {
-    display: block;
-  }
-
 }
 
 /*********** stats ************/
@@ -1116,22 +1089,22 @@ button {
 
 /*********** Blog ************/
 .section--blog {
-  padding: 106px 0px 106px 0px;
+  padding: 59px 0px 0px 0px;
   margin: 0 auto;
   background: #f5f8ff;
 }
 
-.container--blog {
+.section--blog .container {
   display: flex;
   align-items: center;
   flex-direction: column;
 }
 
-.title--blog {
-  margin-bottom: 92px;
+.section--blog .title {
+  margin-bottom: 30px;
 }
 
-.subtitle--blog {
+.section--blog .subtitle {
   padding-bottom: 20px;
   display: flex;
   justify-content: center;
@@ -1193,11 +1166,7 @@ button {
   border-radius: 5px;
 }
 
-.title--content {
-  margin: 0px 0px 12px 0px;
-}
-
-.description--blog {
+.section--blog .description {
   font-size: 0.93rem;
   line-height: 1.93em;
   margin-bottom: 44px;
@@ -1211,7 +1180,6 @@ button {
 }
 
 @media (max-width: 576px) {
-
   .content__page {
     flex-direction: column;
     margin: auto;
@@ -1223,14 +1191,14 @@ button {
 
   .page_right {
     align-items: center;
-    padding: 54px 14px;
+    padding: 0px 14px;
   }
 
-  .title--content {
+  .section--blog .title {
     text-align: center;
   }
 
-  .description--blog {
+  .section--blog .description {
     text-align: center;
     padding: 0px 15px;
   }
@@ -1261,7 +1229,7 @@ button {
     padding: 0px 0px 20px 0px;
   }
 
-  .title--content {
+  .section--blog .title {
     margin: auto;
   }
 
@@ -1271,18 +1239,22 @@ button {
     margin: auto;
   }
 
-  .description--blog {
+  .section--blog .description {
     padding: 0px 15px;
   }
 
 }
 
 @media (min-width: 992px) {
+  .section--blog {
+    padding: 106px 0px 106px 0px;
+  }
+
   .content__page {
     flex-direction: row;
   }
 
-  .description--blog {
+  .section--blog .description {
     padding: 15px;
   }
 }
@@ -1492,7 +1464,7 @@ button {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 174px 0px 174px 0px;
+  padding: 44px 0px;
 }
 
 .section--customer .subtitle {
@@ -1537,6 +1509,10 @@ button {
   padding-right: 34px;
 }
 
+.questions__item-content {
+  align-items: baseline;
+}
+
 .questions__item:nth-of-type(3) {
   font-weight: bold;
   color: #495274;
@@ -1555,12 +1531,22 @@ button {
   .questions__item-content {
     flex-direction: column;
   }
+
+  .btn.btn--secondary {
+    margin-top: 12px;
+  }
+}
+
+@media (min-width: 992px) {
+  .section--customer .container {
+    padding: 174px 0px 174px 0px;
+  }
 }
 
 /*********** Get started ***********/
 
 .section--get {
-  padding: 80px 0px 88px 0px;
+  padding: 30px 0px;
   background-image: url(../img/content.jpg);
   background-position: center;
   background-size: cover;
@@ -1592,6 +1578,12 @@ button {
   text-align: center;
   letter-spacing: 0.03em;
   color: #ffffff;
+}
+
+@media (min-width: 576px) {
+  .section--get {
+    padding: 88px 0px;
+  }
 }
 
 /*********** newsletter ***********/
@@ -1692,27 +1684,31 @@ form {
 /*********** footer ***********/
 .footer {
   background: #ffffff;
-  padding: 92px 0px 16px 0px;
+  padding: 32px 0px 16px 0px;
 }
 
 .footer .container {
   display: flex;
-  padding-bottom: 50px;
+  padding-bottom: 30px;
   justify-content: space-between;
+  flex-direction: column;
 }
 
 .footer .menu {
   display: flex;
   flex-direction: column;
-  position: relative;
-  top: 34px;
+  padding-top: 10px;
 }
 
-.footer__left,
+.footer__left {
+  padding-bottom: 16px;
+}
+
+/*.footer__left,
 .footer__right {
   display: flex;
   align-items: center;
-}
+}*/
 
 .logo {
   margin-right: 73px;
@@ -1761,18 +1757,41 @@ form {
   color: #aeb8d0;
   font-size: 0.8rem;
   letter-spacing: 0.08em;
-  margin: 29px 0px 0px 99px;
+  /*  margin: 29px 0px 0px 99px;*/
 }
 
-@media (min-width: 768px) {
-  .footer .btn--action {
-    display: block;
+@media (min-width: 576px) {
+  .footer {
+    padding: 32px 0px 16px 0px;
+  }
+
+  .footer .menu {
+    padding-top: 0px;
+  }
+
+  .footer .container {
+    padding-bottom: 50px;
+    flex-direction: row;
+  }
+
+  .footer__left {
+    padding-bottom: 0px;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .copyright {
+    margin-left: 99px;
   }
 }
 
 @media (min-width: 992px) {
-  .footer .btn--action {
-    display: block;
+  .footer {
+    padding: 98px 0px 16px 0px;
+  }
+
+  .footer__left {
+    align-items: center;
   }
 
   .footer .menu {
@@ -1783,4 +1802,13 @@ form {
   }
 }
 
-@media (min-width: 1200px) {}
+@media (min-width: 1200px) {
+  .footer__right {
+    display: flex;
+  }
+
+  .footer .btn--action {
+    display: block;
+  }
+
+}
