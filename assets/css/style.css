@@ -77,7 +77,6 @@ button {
 .container {
   margin: 0 auto;
   max-width: 1210px;
-  overflow: hidden;
   padding: 0 15px;
   word-break: break-word;
 }
@@ -105,6 +104,10 @@ button {
   color: #8d96bd;
 }
 
+.overflow-hidden {
+  overflow: hidden;
+}
+
 /*********** buttons ***********/
 .btn {
   height: 43px;
@@ -126,7 +129,10 @@ button {
   display: none;
 }
 
-/*переместить в секцию нужную*/
+.btn--primary:hover {
+  background-color: #bfcce7;
+}
+
 .btn--primary.btn--active {
   display: none;
 }
@@ -141,7 +147,7 @@ button {
 }
 
 .btn--secondary:hover {
-  background: red;
+  background: #6767ff;
   color: #fff;
 }
 
@@ -150,11 +156,12 @@ button {
   color: #d43f3f;
   background: #ffd7d7;
   border-radius: 2px;
-}
-
-.btn--danger {
   border: none;
   width: 112px;
+}
+
+.btn--danger:hover {
+  background-color: #ffa9a9;
 }
 
 .btn--light {
@@ -164,6 +171,10 @@ button {
   font-size: 0.87rem;
   color: #a6b6da;
   border: none;
+}
+
+.btn--light:hover {
+  background-color: #f1f1f1;
 }
 
 .btn--link {
@@ -183,6 +194,11 @@ button {
   border: 1px solid #2750a7;
 }
 
+.btn--outline:hover {
+  background-color: #efefef;
+  color: #858383;
+}
+
 .btn--grey {
   color: #adb4d2;
   border: 1px solid #d1d1e4;
@@ -198,6 +214,10 @@ button {
   padding: 16px 66px;
   border-radius: 5px;
   border: none;
+}
+
+.btn--submit:hover {
+  background-color: #8888ff;
 }
 
 .btn--lg {
@@ -253,14 +273,9 @@ button {
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
-
 .btn--rounded {
   border-radius: 2px;
 }
-
-/*.btn--get {
-  font-weight: bold;
-}*/
 
 .btn--price {
   font-weight: bold;
@@ -269,6 +284,12 @@ button {
   border: 0;
   padding-left: 26px;
   padding-right: 26px;
+  border-bottom-left-radius: 2px;
+  border-top-left-radius: 2px;
+}
+
+.btn--price:hover {
+  background-color: #d5d5d5;
 }
 
 .btn--read-doc {
@@ -281,6 +302,13 @@ button {
   background: linear-gradient(229.32deg, #6888ff 12.77%, #5e80ff 73.11%);
   color: #c7d3ff;
   border: 1px solid #c7d3ff;
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+}
+
+.btn--read-doc:hover {
+  background: linear-gradient(229.32deg, #164ae5 12.77%, #164ae5 73.11%);
+  color: #FFF;
 }
 
 .btn--action {
@@ -348,6 +376,10 @@ button {
   display: flex;
   align-items: center;
   margin-right: 44px;
+}
+
+.social:hover {
+  filter: invert(46%) sepia(69%) saturate(1507%) hue-rotate(206deg) brightness(101%) contrast(100%);
 }
 
 .social+.social {
@@ -469,7 +501,6 @@ button {
   }
 }
 
-
 /*********** Hero ************/
 .section--hero {
   position: relative;
@@ -507,6 +538,13 @@ button {
   }
 }
 
+@media (min-width: 1200px) {
+  .section--hero .slider__nav {
+    position: relative;
+    left: -28px;
+  }
+}
+
 /*********** partners-section ***********/
 .section--partners {
   display: flex;
@@ -527,6 +565,10 @@ button {
 .partner {
   display: flex;
   height: 29px;
+}
+
+.partner:hover {
+  filter: invert(46%) sepia(69%) saturate(1507%) hue-rotate(206deg) brightness(101%) contrast(100%);
 }
 
 .partner:nth-of-type(2) {
@@ -603,18 +645,14 @@ button {
   text-align: center;
 }
 
-
-
 .plan__pic {
   width: -webkit-fill-available;
 }
 
 @media (min-width: 576px) {
-
   .plan__left {
     padding-bottom: 20px;
   }
-
 }
 
 @media (min-width: 992px) {
@@ -708,8 +746,6 @@ button {
     bottom: -17px;
     left: 124px;
   }
-
-
 }
 
 @media (min-width: 1400px) {
@@ -720,8 +756,6 @@ button {
     left: 124px;
   }
 }
-
-
 
 /*********** features ***********/
 
@@ -734,6 +768,8 @@ button {
   display: flex;
   flex-direction: column;
   align-items: center;
+  max-width: 761px;
+  padding: 0px;
 }
 
 .section--features .title {
@@ -757,11 +793,12 @@ button {
   width: 28px;
   height: 0px;
   border: 1px solid #dae4fe;
-  margin: 128px 20px 0px 20px;
+  margin: 128px 17px 0px 20px;
 }
 
 .fea_table_col {
   text-align: center;
+  width: 140px;
 }
 
 .col__item {
@@ -772,7 +809,6 @@ button {
   border-radius: 50%;
   height: 120px;
   width: 120px;
-
 }
 
 .homeicon,
@@ -787,15 +823,15 @@ button {
   font-size: 1.73rem;
   line-height: 0.96em;
   color: #4074f8;
-  margin-top: 30px;
+  margin-top: 35px;
 }
 
 .fea__text,
 .fea__or {
   font-size: 1.2rem;
-  line-height: 1.06em;
+  line-height: 1.7em;
   color: #adb3cb;
-  margin-top: 26px;
+  margin-top: 34px;
   letter-spacing: 0.06em;
 }
 
@@ -899,7 +935,7 @@ button {
 @media (min-width: 1200px) {
   .section--features {
     padding-top: 171px;
-    padding-bottom: 171px
+    padding-bottom: 171px;
   }
 
   .section--features .subtitle {
@@ -914,10 +950,11 @@ button {
 
   .fea__table {
     flex-direction: row;
+    margin-bottom: 108px;
   }
 
   .fea_h3 {
-    font-size: 0.93rem;
+    font-size: 1rem;
   }
 
   .fea__text,
@@ -926,7 +963,7 @@ button {
   }
 
   .fea__or {
-    padding-top: 5px;
+    padding-top: 2px;
   }
 
   .fea_table_line {
@@ -939,8 +976,8 @@ button {
   }
 
   .col__item img {
-    width: 18px;
-    height: 21px;
+    width: 26px;
+    height: 20px;
   }
 
   /*
@@ -1078,7 +1115,6 @@ button {
     margin: 4px 0px 66px 0px;
     text-align: center;
   }
-
 }
 
 @media (min-width: 768px) {
@@ -1100,14 +1136,14 @@ button {
   flex-direction: column;
 }
 
-.section--blog .title {
-  margin-bottom: 30px;
-}
-
 .section--blog .subtitle {
   padding-bottom: 20px;
   display: flex;
   justify-content: center;
+}
+
+.section--blog .title {
+  margin-bottom: 15px;
 }
 
 .blog__content {
@@ -1130,6 +1166,11 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.content__arrow:hover {
+  cursor: pointer;
+  filter: invert(46%) sepia(69%) saturate(1507%) hue-rotate(206deg) brightness(101%) contrast(100%);
 }
 
 .content__arrow:first-child {
@@ -1166,6 +1207,27 @@ button {
   border-radius: 5px;
 }
 
+.page__pic {
+  /*  object-fit: cover;*/
+  width: 100%;
+  max-height: 100%;
+}
+
+.page__pic:first-child {
+  height: -webkit-fill-available;
+  object-fit: fill;
+}
+
+.page__pic:nth-of-type(2) {
+  height: -webkit-fill-available;
+  object-fit: fill;
+}
+
+.page__pic:nth-of-type(3) {
+  height: -webkit-fill-available;
+  object-fit: fill;
+}
+
 .section--blog .description {
   font-size: 0.93rem;
   line-height: 1.93em;
@@ -1177,6 +1239,14 @@ button {
   position: absolute;
   display: flex;
   justify-content: center;
+}
+
+.btn--primary {
+  display: block;
+}
+
+.btn--light {
+  margin: 15px 0px;
 }
 
 @media (max-width: 576px) {
@@ -1207,11 +1277,9 @@ button {
     margin: auto;
   }
 
-  .btn--light {
+  /*  .btn--light {
     margin: auto;
-  }
-
-
+  } */
 }
 
 @media (min-width: 576px) {
@@ -1226,11 +1294,10 @@ button {
 
   .page_right {
     text-align: center;
-    padding: 0px 0px 20px 0px;
   }
 
-  .section--blog .title {
-    margin: auto;
+  .section--blog .description {
+    padding: 0px 15px;
   }
 
   .btn-blog-group {
@@ -1239,15 +1306,32 @@ button {
     margin: auto;
   }
 
-  .section--blog .description {
-    padding: 0px 15px;
+  .btn--light {
+    margin: 0 auto;
   }
+
+  .btn--primary {
+    margin-right: 15px;
+  }
+
 
 }
 
 @media (min-width: 992px) {
   .section--blog {
     padding: 106px 0px 106px 0px;
+  }
+
+  .section--blog .title {
+    margin-bottom: 92px;
+  }
+
+  .page__pic {
+    width: auto;
+  }
+
+  .page_right .title {
+    margin: auto;
   }
 
   .content__page {
@@ -1278,8 +1362,6 @@ button {
   display: flex;
   align-items: flex-start;
   flex-direction: column;
-  flex-grow: 1;
-  flex-basis: 0;
   margin: 0;
   padding-bottom: 54px;
 }
@@ -1304,7 +1386,6 @@ button {
   padding-bottom: 20px;
 }
 
-
 .quotes__left .description {
   font-size: 0.8rem;
   line-height: 1.92em;
@@ -1320,8 +1401,6 @@ button {
   line-height: 1.71em;
   letter-spacing: 0.03em;
   color: #676f95;
-  flex-grow: 1;
-  flex-basis: 0;
   left: 0px;
 }
 
@@ -1344,7 +1423,7 @@ button {
 .slider__slide-message {
   padding: 38px 70px 40px 68px;
   background-color: #fff;
-  text-align: center
+  text-align: center;
 }
 
 .slider__slide.slider__slide--shadow {
@@ -1399,6 +1478,12 @@ button {
   position: relative;
 }
 
+@media (min-width: 576px) {
+  .slider__portal {
+    width: 475px;
+  }
+}
+
 @media (min-width: 1200px) {
   .container {
     overflow: initial;
@@ -1409,6 +1494,7 @@ button {
   }
 
   .quotes__left {
+    min-width: 333px;
     padding-left: 80px;
   }
 
@@ -1416,8 +1502,14 @@ button {
     flex-direction: row;
   }
 
+  .quotes__left .title {
+    margin: 0;
+    text-align: left;
+    padding-bottom: 14px;
+  }
+
   .quotes__left .subtitle {
-    margin: 22px 0px 32px 0px;
+    margin: 10px 0px 32px 0px;
     padding-bottom: 0px;
   }
 
@@ -1426,13 +1518,12 @@ button {
     text-align: left;
   }
 
-  .quotes__left .title {
-    margin: 0;
-    text-align: left;
+  .quotes__right {
+    left: 214px;
   }
 
-  .quotes__right {
-    left: 300px;
+  .slider__portal {
+    width: auto;
   }
 
   .slider__slide-image {
@@ -1452,10 +1543,9 @@ button {
   }
 
   .section--quotes .slider__nav {
-    left: -235px;
+    left: -190px;
   }
 }
-
 
 /*********** customer_help ***********/
 
@@ -1513,6 +1603,10 @@ button {
   align-items: baseline;
 }
 
+.questions__item:hover {
+  cursor: pointer;
+}
+
 .questions__item:nth-of-type(3) {
   font-weight: bold;
   color: #495274;
@@ -1527,12 +1621,20 @@ button {
   transform: rotate(180deg);
 }
 
+.questions__item:hover {
+  background-color: #e7e7e7;
+}
+
+.questions__vektor:hover {
+  filter: invert(46%) sepia(69%) saturate(1507%) hue-rotate(206deg) brightness(101%) contrast(100%);
+}
+
 @media (max-width: 576px) {
   .questions__item-content {
     flex-direction: column;
   }
 
-  .btn.btn--secondary {
+  .section--customer .btn--secondary {
     margin-top: 12px;
   }
 }
@@ -1604,7 +1706,6 @@ button {
 }
 
 .section--newsletter .subtitle {
-
   letter-spacing: 0.01em;
   font-size: 1.2rem;
   margin: auto;
@@ -1639,9 +1740,17 @@ form {
   color: #7a85ad;
   background: #efeff7;
   font-weight: 700;
-  /*padding-bottom: 44px;*/
   text-align: center;
+}
 
+@media (min-width: 576px) {
+  form {
+    flex-direction: row;
+  }
+
+  .e-mail {
+    margin: 0px 10px 0px 0px;
+  }
 }
 
 @media (min-width: 992px) {
@@ -1676,9 +1785,7 @@ form {
 
   .e-mail {
     padding: 0px 75px 0px 26px;
-    width: 90px;
   }
-
 }
 
 /*********** footer ***********/
@@ -1780,9 +1887,6 @@ form {
     flex-direction: row;
   }
 
-  .copyright {
-    margin-left: 99px;
-  }
 }
 
 @media (min-width: 992px) {
@@ -1810,5 +1914,4 @@ form {
   .footer .btn--action {
     display: block;
   }
-
 }
