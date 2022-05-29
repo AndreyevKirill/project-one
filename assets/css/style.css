@@ -111,8 +111,7 @@ button {
 /*********** buttons ***********/
 .btn {
   height: 43px;
-  padding-left: 16px;
-  padding-right: 16px;
+  padding: 0px 16px;
 }
 
 .btn:hover {
@@ -283,8 +282,7 @@ button {
   background-color: #ffffff;
   color: #565f82;
   border: 0;
-  padding-left: 26px;
-  padding-right: 26px;
+  padding: 0px 26px;
   border-bottom-left-radius: 2px;
   border-top-left-radius: 2px;
 }
@@ -1515,12 +1513,12 @@ button {
 }
 
 .section--customer .subtitle {
-  margin-bottom: 22px;
+  margin-bottom: 21px;
   letter-spacing: 0.1em;
 }
 
 .section--customer .title {
-  margin-bottom: 52px;
+  margin-bottom: 54px;
   letter-spacing: 0.01em;
 }
 
@@ -1550,7 +1548,7 @@ button {
 }
 
 .section--customer .description {
-  padding: 15px 44px 0px 0px;
+  padding: 15px 44px 0px 2px;
   margin: 0;
   letter-spacing: 0.01em;
   font-size: 0.93rem;
@@ -1563,9 +1561,12 @@ button {
   color: #495274;
 }
 
+.questions__item:last-child {
+  padding-top: 31px;
+}
+
 .questions__icon-wraper {
-  padding-right: 22px;
-  padding-left: 16px;
+  padding: 0px 22px 0px 16px;
 }
 
 .questions__item.questions__item--active .questions__vektor {
@@ -1600,7 +1601,7 @@ button {
 /*********** Get started ***********/
 
 .section--get {
-  padding: 30px 0px;
+  padding: 91px 0px;
   background-image: url(../img/content.jpg);
   background-position: center;
   background-size: cover;
@@ -1615,13 +1616,15 @@ button {
 
 .section--get .title {
   font-size: 3.2rem;
-  margin-bottom: 30px;
+  margin-bottom: 23px;
   color: white;
 }
 
 .section--get .subtitle {
-  padding-bottom: 24px;
+  margin-bottom: 16px;
   color: white;
+  letter-spacing: 0.1em;
+  font-weight: 400;
 }
 
 .section--get .description {
@@ -1642,13 +1645,13 @@ button {
 /*********** newsletter ***********/
 .section--newsletter {
   border-bottom: 1px solid #d8e3fe;
+  padding: 109px 0px 121px 0px;
 }
 
 .section--newsletter .container {
   display: flex;
   align-items: center;
   flex-direction: column;
-  padding: 20px 15px;
 }
 
 .newsletter--left {
@@ -1657,10 +1660,9 @@ button {
 }
 
 .section--newsletter .subtitle {
-  letter-spacing: 0.01em;
+  letter-spacing: 0.04em;
   font-size: 1.2rem;
   margin: auto;
-  padding-bottom: 22px;
 }
 
 .section--newsletter .discription {
@@ -1684,14 +1686,19 @@ form {
 
 .e-mail {
   height: 59px;
-  margin-bottom: 15px;
   font-size: 13px;
   border-radius: 5px;
   border: none;
   color: #7a85ad;
   background: #efeff7;
   font-weight: 700;
-  text-align: center;
+}
+
+@media (max-width: 576px) {
+  .e-mail {
+    padding-left: 15px;
+    margin-bottom: 15px;
+  }
 }
 
 @media (min-width: 576px) {
@@ -1701,6 +1708,7 @@ form {
 
   .e-mail {
     margin: 0px 10px 0px 0px;
+    padding-left: 15px;
   }
 }
 
@@ -1708,20 +1716,15 @@ form {
   form {
     flex-direction: row;
   }
-
-  .e-mail {
-    margin: 0px 16px 0px 34px;
-  }
 }
 
 @media (min-width: 1200px) {
   .section--newsletter .container {
     flex-direction: row;
-    padding: 110px 0px 122px 0px;
   }
 
   .newsletter--left {
-    margin-right: 70px;
+    margin-right: 100px;
     width: 480px;
   }
 
@@ -1735,7 +1738,7 @@ form {
   }
 
   .e-mail {
-    padding: 0px 75px 0px 26px;
+    padding: 0px 87px 0px 25px;
   }
 }
 
@@ -1775,7 +1778,8 @@ form {
 }
 
 .footer .menu__item:not(:last-child) {
-  margin-right: 42px;
+  margin-right: 44px;
+  letter-spacing: 0.06em;
 }
 
 .footer .menu__item:hover {
@@ -1811,6 +1815,34 @@ form {
   letter-spacing: 0.08em;
 }
 
+@media (max-width: 576px) {
+  .footer .container {
+    text-align: center;
+    align-items: center;
+  }
+
+  .footer .logo {
+    margin: auto;
+  }
+
+  .menu__item {
+    margin: 0;
+  }
+
+  .footer .menu__item:not(:last-child) {
+    margin: 0;
+    padding-bottom: 10px;
+  }
+
+  .footer .menu__item {
+    padding-bottom: 0px;
+  }
+
+  .footer .socials {
+    margin: 0;
+  }
+}
+
 @media (min-width: 576px) {
   .footer {
     padding: 32px 0px 16px 0px;
@@ -1831,6 +1863,16 @@ form {
     flex-direction: row;
   }
 
+  .container.copyright {
+    padding-left: 114px;
+  }
+}
+
+@media (min-width: 768px) {
+  .footer .menu__footer {
+    flex-direction: row;
+    padding-top: 5px;
+  }
 }
 
 @media (min-width: 992px) {
@@ -1845,12 +1887,14 @@ form {
   .footer .menu {
     display: flex;
     flex-direction: row;
-    position: relative;
-    top: 4px;
   }
 }
 
 @media (min-width: 1200px) {
+  .footer .container {
+    padding-bottom: 29px;
+  }
+
   .footer__right {
     display: flex;
   }
